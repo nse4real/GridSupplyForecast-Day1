@@ -22,3 +22,9 @@ This directory contains scripts and data for **Day 1** of the Grid-Supply Foreca
    ```powershell
    pip install -r requirements.txt
    python eda_pandas.py
+
+   ### Day 2: Baseline Forecast with Prophet
+
+...
+
+![Actual vs Forecast (hold-out)](images/day2_baseline_plot.png)

@@ -1,0 +1,48 @@
+## Day 2: Baseline Forecast with Prophet
+
+
+...
+
+![Actual vs Forecast (hold-out)](images/day2_baseline_plot.png)
+### 1. Data Selection  
+- **File:** `bishops-wood_wmids.csv`  
+- **Reason:** First GSP in the set; clean, complete timestamps at 5-minute intervals.
+
+### 2. Preprocessing & Hold-Out  
+- **Timestamp parsing:** Converted `Timestamp` → `ds` (datetime).  
+- **Target variable:** Used `Import` as the forecasted quantity (`y`).  
+- **Train/validation split:**  
+  - Sorted by `ds` ascending.  
+  - **Hold-out:** last 12 observations (~1 hour at 5-minute resolution).  
+  - **Train set:** 59 rows; **Validation set:** 12 rows.
+
+### 3. Model Configuration  
+- **Library:** [Prophet](https://facebook.github.io/prophet/) (via `from prophet import Prophet`).  
+- **Seasonality:**  
+  - `daily_seasonality=True`  
+  - `weekly_seasonality=True`  
+- **Hyperparameters:**  
+  - All other settings left at Prophet’s defaults (e.g. `changepoint_prior_scale=0.05`, no extra regressors).
+
+### 4. Forecast & Evaluation  
+- **Forecast horizon:** 12 future points (matching validation).  
+- **Frequency:** 5 minutes (`freq="5min"`).  
+- **Metrics** on validation hold-out:  
+  - **MAE:** 52.72  
+  - **RMSE:** 60.01
+
+### 5. Visualization  
+![bishops-wood_wmids.csv: Actual vs Forecast (hold-out)](images/day2_baseline_plot.png)  
+*Blue = training data, Orange = actual validation, Green = Prophet forecast.*
+
+### 6. Next Steps  
+1. **Hyperparameter tuning:**  
+   - Increase `changepoint_prior_scale` for more flexibility.  
+   - Add `seasonality_mode="multiplicative"` if seasonal effects scale with magnitude.  
+2. **Additional regressors:**  
+   - Solar & Wind (columns already in the CSV).  
+   - UK bank holidays via `model.add_country_holidays("UK")`.  
+3. **Cross-validation:**  
+   - Use Prophet’s `cross_validation` & `performance_metrics` utilities to get more robust error estimates.  
+4. **Scale to all GSPs:**  
+   - Refactor into your loop (`eda_multiple_gsps.py`) once the pipeline is stable on this one file.
