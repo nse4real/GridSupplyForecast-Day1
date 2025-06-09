@@ -21,14 +21,14 @@ GridSupplyForecast/
 │ ├── bushbury_eda_pandas.png
 │ ├── bustleholm_eda_pandas.png
 │ ├── cellarhead_eda_pandas.png
-│ ├── … # one file per GSP
-│ └── day2_baseline_plot.png # placeholder for Day 2
+│ ├──
+│ └── willenhall_eda_pandas.png
 ├── data/ # Raw NGED GSP CSV files
 ├── eda_pandas.py # Single-GSP EDA using pandas
 ├── eda_multiple_gsps.py # Loop over all GSP CSVs & plot first week
 ├── eda_spark.py # PySpark EDA: schema + sample→pandas plot
 ├── requirements.txt # Locked Day 1 dependencies
-├── README.md # This file
+├── README.md
 ├── venv/ # Python 3.13 venv (initial)
 └── venv312/ # Python 3.12 venv (active Day 1 env)
 
@@ -91,7 +91,6 @@ python eda_multiple_gsps.py
 </details>
 
 ### 3. Spark-Based EDA
-   ```powershell
  python eda_spark.py
 
 
@@ -103,3 +102,10 @@ Day 1 Observations
 * SHAP wheel: Python 3.12 venv allowed pip install shap without C++ compilation errors.
 * Data ingestion: All GSP CSVs loaded correctly; no missing timestamps.
 * EDA insights: Clear daily and weekly demand/import patterns visible across GSPs.
+
+
+### Day 2: Baseline Forecast with Prophet
+
+...
+
+![Actual vs Forecast (hold-out)](images/day2_baseline_plot.png)
