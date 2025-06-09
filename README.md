@@ -69,19 +69,34 @@ python eda_multiple_gsps.py
 <details>
 <summary><strong>Day 1 Pandas EDA Plots</strong></summary>
 
-![bishops-wood](images/bishops-wood_eda_pandas.png)  
+![bishop-woods](images/bishop-woods_eda_pandas.png)  
 ![bushbury](images/bushbury_eda_pandas.png)  
 ![bustleholm](images/bustleholm_eda_pandas.png)  
-![cellarhead](images/cellarhead_eda_pandas.png)  
-…  
+![cellarhead](images/cellahead_eda_pandas.png)  
+![claydon](images/claydon_eda_pandas.png)
+![feckenham](images/feckenham_eda_pandas.png)
+![iron-acton](images/iron-acton_eda_pandas.png)
+![ironbridge](images/ironbridge_eda_pandas.png)
+![kitwell](images/kitwell_eda_pandas.png)
+![lea_marston](images/lea_marston_eda_pandas.png)
+![nechellsa-east-sec1](images/nechellsa-east-sec1_eda_pandas.png)
+![nechellsa-east-sec2](images/nechellsa-east-sec2_eda_pandas.png)
+![ocker-hill](images/ocker-hill_eda_pandas.png)
+![oldbury](images/oldbury_eda_pandas.png)
+![penns](images/penns_eda_pandas.png)
+![rugeley](images/rugeley_eda_pandas.png)
+![walham](images/walham_eda_pandas.png)
 ![willenhall](images/willenhall_eda_pandas.png)
 
 </details>
 
 ### 3. Spark-Based EDA
 
-```powershell
-python eda_spark.py
+ python eda_spark.py
+
+
+<strong>Day 1 Spark EDA Plots</strong></summary>
+![bishop-woods](images/bishop-woods_eda_spark.png)  
 
 Day 1 Observations
 * Virtual env setup: Relaxed PowerShell policy; successfully activated Python 3.12 venv.
