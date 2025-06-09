@@ -66,28 +66,23 @@ python eda_multiple_gsps.py
 * Prints info & head for each GSP.
 * Plots the first 7 days’ hourly average for each GSP.
 
-<details> <summary><strong>Day 1 Pandas EDA Plots</strong></summary>
+<details>
+<summary><strong>Day 1 Pandas EDA Plots</strong></summary>
 
-
-
-
-…
+![bishops-wood](images/bishops-wood_eda_pandas.png)  
+![bushbury](images/bushbury_eda_pandas.png)  
+![bustleholm](images/bustleholm_eda_pandas.png)  
+![cellarhead](images/cellarhead_eda_pandas.png)  
+…  
+![willenhall](images/willenhall_eda_pandas.png)
 
 </details>
-3. Spark-Based EDA
+
+### 3. Spark-Based EDA
+
+```powershell
 python eda_spark.py
 
-* Creates a local SparkSession (master="local[*]").
-* Reads the same CSV with spark.read.csv(...).
-* Prints Spark schema & first 5 rows.
-* Converts a sample to pandas and displays the same hourly-average plot.
-
-Note: Warnings about winutils.exe and HADOOP_HOME are harmless for local batch reads.
-
-<details> <summary><strong>Example Spark EDA Plot</strong></summary>
-
-
-</details>
 Day 1 Observations
 * Virtual env setup: Relaxed PowerShell policy; successfully activated Python 3.12 venv.
 * SHAP wheel: Python 3.12 venv allowed pip install shap without C++ compilation errors.
