@@ -27,6 +27,9 @@ GridSupplyForecast/
 ├── eda_pandas.py # Single-GSP EDA using pandas
 ├── eda_multiple_gsps.py # Loop over all GSP CSVs & plot first week
 ├── eda_spark.py # PySpark EDA: schema + sample→pandas plot
+├─ day3_prophet.py
+├─ day3_evaluate.py
+└─ prophet_utils.py
 ├── requirements.txt # Locked Day 1 dependencies
 ├── README.md
 ├── venv/ # Python 3.13 venv (initial)
